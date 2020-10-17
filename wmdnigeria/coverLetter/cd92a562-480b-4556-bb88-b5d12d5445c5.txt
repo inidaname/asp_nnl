@@ -1,0 +1,86 @@
+====================
+SWEET HOUR OF PRAYER
+====================
+   
+Sweet hour of prayer, sweet hour of prayer
+That calls me from a world of care,
+And bids me at my father's throne
+Make all my wants and wishes known:
+In seasons of distress and grief
+My soul has often found relief,
+And oft escaped the tempter's snare
+By thy return, sweet hour of prayer.
+   
+Sweet hour of prayer, sweet hour of prayer,
+Thy wings shall my petition bear
+To Him whose truth and faithfulness
+Engage the waiting soul to bless:
+And since He bids me seek His face
+believe His Word, and trust His grace
+I'll cast on Him my ev'ry care
+And wait for thee, sweet hour of prayer
+   
+                            - William W Walford 
+
+
+
+
+Dear Friend,
+
+Thank you for your interest in our books.
+
+You can do a wire transfer to purchase the books 
+and sign up for any of the programs.
+
+Here's our banking details as requested... 
+ 
+BANK:           TD Canada Trust 
+ADDRESS:        156 Ouellette Avenue, Windsor, ON N9A 1A4, CANADA 
+ACCOUNT NAME:   Firesprings Inc. 
+ADDRESS:        818 Newport Crescent, WIndsor, ON N9E 4Z5, CANADA
+ACCOUNT NUMBER: 02937316792 
+ROUTING NO.:    026009593 
+SWIFT:          TDOMCATTTOR
+
+
+
+*** VERY IMPORTANT  ***
+
+ 
+Kindly send me an email at elisha@firesprings.com 
+with confirmation AFTER the transfer... 
+
+With the words "TT SENT" in the subject line.
+ 
+With this we will be able to set up your account and  
+send you the download links immediately.
+
+
+THIS IS VERY IMPORTANT -- without the words "TT SENT"
+in the subject line, your email could get buried among
+thousands of emails that come into my inbox daily.
+
+And we will not be able to act on it in time.
+
+SO PLEASE send the email immediately so we can set up
+your account and send you the download links
+ 
+ 
+God bless you!
+
+elisha
+
+
+5,054.18
+
+https://www.youtube.com/watch?v=PbNGDr9Nmwo
+
+
+fiverr.com\
+
+
+SET sort_buffer_size=10000;
+SET @@local.sort_buffer_size=10000;
+SET GLOBAL sort_buffer_size=1000000, SESSION sort_buffer_size=1000000;
+SET @@sort_buffer_size=1000000;
+SET @@global.sort_buffer_size=1000000, @@local.sort_buffer_size=1000000;

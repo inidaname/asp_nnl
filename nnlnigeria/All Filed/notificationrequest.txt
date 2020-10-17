@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CustomerInformationRequest>
+    <MerchantReference>126</MerchantReference>
+    <CustReference>cyprosoft</CustReference >
+    <PaymentItemCode>6280510431000</PaymentItemCode>
+    <ServiceUsername></ServiceUsername>
+   <ServicePassword></ServicePassword>
+   <FtpUsername></FtpUsername>
+   <FtpPassword></FtpPassword>
+</CustomerInformationRequest>

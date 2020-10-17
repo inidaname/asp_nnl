@@ -1,0 +1,71 @@
+body {
+	width:98%;
+	font-family:Tahoma;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 20px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 1.42857;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background:rgb(54,127,169);
+    margin-left:10px;
+    margin-top:3px;
+	
+}
+.button:hover {
+    color: #FFF;
+    background-color: #31B0D5;
+    border-color: #269ABC;
+    font-weight: bolder;
+   
+}
+input[type="file"] {display: block;
+    width:98%;
+    height: 26px;
+    padding:2px 0px;
+    font-size: 14px;
+    color: #555;
+    background: rgba(255, 255, 255, 255);
+    background-image: none;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;	
+	
+}
+   	
+.select {display: block;
+    width: 98%;
+    height: 30px;
+    /*padding:3px 10px; */
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #222;
+    background: rgba(255, 255, 255, 255);
+    background-image: none;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;	
+    padding: 5px 35px 5px 5px;
+    font-size: 13px;
+    height: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url(../images/drop.png) 98.5% / 15% no-repeat  rgba(255, 255, 255, 255);
+    background-size:15px 15px;
+    float: left;
+	margin-bottom:20px;
+ 
+    	  	

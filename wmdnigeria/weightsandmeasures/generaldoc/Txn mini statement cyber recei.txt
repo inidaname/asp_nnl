@@ -1,0 +1,59 @@
+
+
+
+
+
+
+
+<!-- File name=CyberReceiptML.jsp --> 
+<!-- C:\Program Files\WebSphere51\AppServer\installedApps\APPSERVER2\BANA64EAR.ear.ear\BANA64WAR.war\web\L001\corporate\jsp\CyberReceiptML.jsp --> 
+
+
+
+
+
+
+
+
+     
+    
+    
+
+       
+       
+            
+       
+       
+
+    
+    				Cyber Receipt		Date:11/11/2013 10:54:23 AM
+    				
+    				
+    ___________________________________________________________________________
+				
+				Transaction Details 
+    ___________________________________________________________________________
+
+    Account Number			: 1015158467 			
+    Transaction Date			: 11/11/2013
+    Transaction Amount 		: (NGN)65,141.75 
+    Transaction Type		        	: DR 
+    Transaction Description 		: TUD-instrument register                  
+    
+    
+    
+    
+    
+    
+    ___________________________________________________________________________
+  
+  
+     
+     
+  
+  
+
+
+
+<!-- File name=CorpMiniStatTxnCyberReceiptSave.jsp --> 
+<!-- C:\Program Files\WebSphere51\AppServer\installedApps\APPSERVER2\BANA64EAR.ear.ear\BANA64WAR.war\web\L001\corporate\jsp\accounts\CorpMiniStatTxnCyberReceiptSave.jsp --> 

@@ -1,0 +1,33 @@
+
+
+    <link rel="stylesheet" href="template/slideshow/themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="template/slideshow/css/nivo-slider.css" type="text/css" media="screen" />
+
+    <div id="wrapper">
+
+        <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="template/slideshow/images/1.jpg" alt="" />
+                <img src="template/slideshow/images/2.jpg" alt="" />
+                <img src="template/slideshow/images/3.jpg" alt="" />
+                <img src="template/slideshow/images/4.jpg" alt="" />
+                <img src="template/slideshow/images/5.jpg" alt="" />
+                <img src="template/slideshow/images/6.jpg" alt="" />
+                <img src="template/slideshow/images/7.jpg" alt="" />
+                <img src="template/slideshow/images/8.jpg" alt="" />
+            </div>
+        </div>
+
+    </div>
+    <!--
+    
+    PLEASE REMOVE COMMENT IF WANT TO USE FOR NEW PLUGIN
+    
+    <script type="text/javascript" src="template/slideshow/scripts/jquery-1.7.1.min.js"></script>
+    -->
+    <script type="text/javascript" src="template/slideshow/scripts/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>

@@ -1,0 +1,170 @@
+﻿<%@ Master Language="VB" CodeFile="adminpage.master.vb" Inherits="adminpage" %>
+<%@ Import Namespace="System.Data" %>
+
+ <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server"  > 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ADMIN LOGIN</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<!--login-->
+	<link rel="stylesheet" href="template/login/css/style.css" type="text/css" />
+    <script type="text/javascript" src="template/login/js/jquery.min.js"></script>
+    <script src="template/login/js/WaterMark.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#txtUserName, #txtPassword").WaterMark({
+                WaterMarkTextColor: '#fff'
+            });
+        });
+    </script>
+ 
+
+<!--slideshow-->
+    <link rel="stylesheet" href="template/slideshow/themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="template/slideshow/css/nivo-slider.css" type="text/css" media="screen" />
+<!--menu-->
+<link href="template/menu/css/dcmegamenu.css" rel="stylesheet" type="text/css" />
+<!--<script type="text/javascript" src="template/menu/js/jquery.min.js"></script>-- Enable if not working. conflict with tooltip-->
+<script type='text/javascript' src='template/menu/js/jquery.hoverIntent.minified.js'></script>
+<script type='text/javascript' src='template/menu/js/jquery.dcmegamenu.1.3.3.js'></script>
+<script type="text/javascript">
+    $(document).ready(function ($) {
+        $('#mega-menu-9').dcMegaMenu({
+            rowItems: '3',
+            speed: 'fast',
+            effect: 'fade'
+        });
+    });
+    function Button2_onclick() {
+        window.confirm("more");
+    }
+
+    function savedalert() {
+        alert("Record Saved Successfully");
+    }
+
+</script>
+<link href="template/menu/css/skins/green.css" rel="stylesheet" type="text/css" />
+
+    
+<!---->
+    <style type="text/css">
+        #Button2
+        {
+            height: 26px;
+        }
+        .style1
+        {
+            width: 13px;
+        }
+        .style2
+        {
+            width: 312px;
+        }
+        .style3
+        {
+            width: 13px;
+            height: 20px;
+        }
+        .style4
+        {
+            width: 312px;
+            height: 20px;
+        }
+        .style5
+        {
+            height: 20px;
+        }
+    </style>
+    </head>
+
+<body>
+    
+  <form id="form1" runat="server">
+    
+<div align="center">
+    <div id="content">
+    	<div class="top">
+        	<div id="top_holder">
+            	<div id="top_left">
+                        
+                        <div id="login4">
+	                        <a href="admnewuser.aspx">New Users</a> |
+                            <a href="admnewuser.aspx?pg=1">Edit Users</a> | 
+                            <a href="changepassword.aspx?pg=1">Change Password</a>
+                        </div>                    
+                	                	 
+                </div>
+              
+
+            </div>
+        </div>
+        <div id="header_holder">
+            <div id="header">
+                <div id="header_left"><img src="images/logonew.png" alt="" /></div>
+                <div id="header_right">
+                    <div class="demo-container">
+                        <div class="green">  
+                            <ul id="mega-menu-9" class="mega-menu">
+                                <li><a href="administrators.aspx">Home</a></li>
+                                <li><a href="admcompanymgt.aspx">Company Mgt.</a></li>
+                                 <li><a href="admdevicemgt.aspx">Instrument Mgt.</a></li>
+                                <li><a href="admstaticdata.aspx">Static Data</a></li>
+                                <li><a href="logout.aspx?pg=1">Log Out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+		<div id="main_page">
+        
+          <%--  <div id="submenubar">
+                <div id="bread">You are Here > <a href="#">&nbsp;</a></div>
+                <div id="request"><a href="#">Registration</a></div>
+            </div>--%>
+            
+            <div id="page">
+    
+
+<!--start home-->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                 <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+                            </cc1:ToolkitScriptManager>
+                    <p>
+                        <br />
+                    </p>
+
+                </asp:ContentPlaceHolder>
+    
+
+<!--end home-->
+
+   				<div id="cards"><img src="images/partners.png" /></div>
+            </div>
+ 
+		</div>        
+    </div>       
+      <div id="footer">
+		<div id="footer_content_left">Copyright &copy; 2013. All rights reserved.</div>
+		<div id="footer_content_right">
+        <a href="#" target="_blank"><strong></strong></a>
+        
+                    <div id="social">
+                        <div id="social_content_f"><a href="http://www.facebook.com/NNLnigeria" alt="Follow us on Facebook" title="Follow us on Facebook">&nbsp;</a></div>
+                        <div id="social_content_t"><a href="http://www.twitter.com/NNLnigeria" alt="Twitter" title="Twitter">&nbsp;</a></div>
+                        <div id="social_content_y"><a href="#" alt="Youtube" title="Youtube">&nbsp;</a></div>
+
+                    </div>
+        </div>
+   </div>
+</div>
+    </form>
+</body>
+</html>  

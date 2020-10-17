@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+#menu {
+	background:url(../images/menu_lvl1_bg.png) repeat-x scroll 0 bottom #FFFFFF;
+	border: 1px solid #DCDCDC;
+	height: 42px;
+	margin: 10px 0 0;
+	position: relative;
+	z-index: 100;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}

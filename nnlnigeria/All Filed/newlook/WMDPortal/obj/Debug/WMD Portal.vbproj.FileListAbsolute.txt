@@ -1,0 +1,9 @@
+C:\Users\SHADOWX\Documents\Visual Studio 2012\Projects\WMD Portal\WMD Portal\obj\Debug\WMD Portal.vbproj.GenerateResource.Cache
+C:\Users\SHADOWX\Documents\Visual Studio 2012\Projects\WMD Portal\WMD Portal\obj\Debug\WMD Portal.vbprojResolveAssemblyReference.cache
+C:\Users\SHADOWX\Documents\Visual Studio 2012\Projects\WMD Portal\WMD Portal\bin\WMDPortal.dll
+C:\Users\SHADOWX\Documents\Visual Studio 2012\Projects\WMD Portal\WMD Portal\bin\WMDPortal.pdb
+C:\Users\SHADOWX\Documents\Visual Studio 2012\Projects\WMD Portal\WMD Portal\bin\WMDPortal.xml
+C:\Users\SHADOWX\Documents\Visual Studio 2012\Projects\WMD Portal\WMD Portal\obj\Debug\WMDPortal.Resources.resources
+C:\Users\SHADOWX\Documents\Visual Studio 2012\Projects\WMD Portal\WMD Portal\obj\Debug\WMDPortal.dll
+C:\Users\SHADOWX\Documents\Visual Studio 2012\Projects\WMD Portal\WMD Portal\obj\Debug\WMDPortal.xml
+C:\Users\SHADOWX\Documents\Visual Studio 2012\Projects\WMD Portal\WMD Portal\obj\Debug\WMDPortal.pdb

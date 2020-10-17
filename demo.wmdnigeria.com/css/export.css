@@ -1,0 +1,212 @@
+﻿body {
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgb(200,200,200,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(200,200,200,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(200,200,200,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(200,200,200,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(200,200,200,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(200,200,200,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin: 0px;
+    font-family: Tahoma, 'Arial Rounded MT';
+}
+.mbtn-close {
+      background:url(../images/closeordelete.png) 2px 7px no-repeat  rgba(238, 238, 246, 0.97);
+      background-size:20px;
+      border: #357ebd solid 1px;
+      border-radius: 3px;
+      color: rgb(150, 0, 0);
+      display: inline-block;
+      font-size: 14px;
+      padding: 8px 25px;
+      text-decoration: none;
+      text-align: center;
+      min-width: 30px;
+      position: relative;
+      transition: color .1s ease;
+      cursor:pointer;
+      font-weight:bold;
+      text-decoration:none;
+}
+
+.mbtn-printer {
+    background: url(../images/printer.png) 2px 0px no-repeat rgb(54,127,169);
+    background-color:rgb(54,127,169);
+    background-size: 30px;
+    display: inline-block;
+    padding: 5px 10px 5px 35px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 1.42857;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -moz-user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-left:10px;
+    margin-top:3px;
+    text-decoration:none;
+}
+    .mbtn-printer:hover {
+        color: #FFF;
+        background-color: #31B0D5;
+        border-color: #269ABC;
+        font-weight: bolder;
+        text-decoration:none;
+}
+
+.modal-footer {
+    padding:0px 0px;
+    width: 500px;
+    margin:0 auto;
+}
+.export-application-details {
+    height: 630px;
+    width: 500px;
+    border: 5px solid rgb(54,127,169);
+    margin: 0 auto;
+    border-radius: 5px;
+    border-radius: 5px;
+    background: rgb(255,255,255);
+}  
+.export-application-details img{
+    height:100%;
+    width:100%;
+    margin:0 auto;
+
+
+}
+.export-application-details-title {
+    font-size:14px;
+    font-weight:bolder;
+    width:98%;
+    text-align:center;
+    margin:12px auto;
+ }
+.export-application-details-body-title { 
+    width:100%;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin-top:5px;
+    border-top:5px solid rgb(54,127,169);  
+    border-bottom:5px solid rgb(54,127,169);  
+    text-align :center;
+    font-weight:bolder;
+}
+.export-application-details-body {
+    margin:0px auto;
+    width:100%;
+    height:282px;
+    background:rgb(12, 76, 112);
+    padding-top:7px;
+
+}
+.export-application-details .label{
+    height:15px;
+    float:left;
+    width:35%;
+    padding:5px;    
+    font-size:14px;
+    color:rgb(255,255,255);
+    text-align:right;
+    border:none;
+    background:transparent;
+    font-family:Tahoma;
+ 
+}
+.export-application-details .label-info {
+    height: 14px;
+    float: right;
+    background: rgb(255,255,255);
+    width: 57%;
+    padding: 5px;
+    font-weight: bolder;
+    font-size: 14px;
+    text-align: right;
+    border: none;
+    border-bottom: thin solid rgb(220, 220, 220);
+    margin-right: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family:Tahoma;
+}
+.export-application-authorization {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    line-height: 15px;
+    height: 66.5px;
+    background:white;
+    color: rgb(220, 220, 220);
+    padding-top: 5px;
+    cursor: pointer;
+    float:left;
+    border-top: 5px solid rgb(54,127,169);
+}
+.export-application-details-declaration {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    line-height: 15px;
+    height: 50px;
+    background: rgb(54,127,169);
+    color: rgb(220, 220, 220);
+    padding-top: 5px;
+    cursor: pointer;
+    float:left;
+}
+
+
+    
+    @page {
+        size: A5;
+         -webkit-print-color-adjust: exact;
+         color-rendering:initial;
+         margin: 0 auto;
+         height: 630px;
+         width: 500px;
+         max-height: 630px;
+         max-width: 500px;
+         border: 5px solid rgb(54,127,169);
+         
+
+         
+          
+    }
+    
+    @media print {
+        
+       
+        html {
+            background: rgb(255,255,255);
+            margin:10px auto;
+            height: 630px;
+            width: 500px;
+            max-height: 630px;
+            max-width: 500px;
+
+        }
+
+        body {
+            background: rgb(255,255,255);
+            margin: 0 auto;
+            background: white;
+            margin: 10px auto;
+            height: 630px;
+            width: 500px;
+            max-height: 630px;
+            max-width: 500px;
+
+
+        }
+
+
+}
+    

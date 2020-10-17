@@ -1,0 +1,82 @@
+﻿nav  {font-size:13px;
+	z-index:2;
+	float:right;
+    font-family:Tahoma;
+	
+
+}
+nav ul {margin:0 auto;
+	z-index:2;
+	
+	
+
+
+}
+nav ul ul {
+	display: none;
+	vertical-align:top;
+	z-index:2;
+
+}
+
+	nav ul li:hover > ul {
+		display: block;
+		border-bottom: 0px;
+		
+	}
+
+
+nav ul {
+	background:transparent; 
+	padding: 0 10px;
+	list-style: none;
+	position:relative;
+	display: inline-table;
+
+}
+	nav ul:after {
+		content: ""; clear: both; display: block;
+		
+	}
+
+
+nav ul li {float: left;
+	border-bottom: 0px;
+
+}
+    nav ul li:hover {
+        transition: all 0.5s ease;
+        border-bottom: 0px;
+        background: rgb(0, 0, 0);
+        
+
+}
+		nav ul li:hover a {color:#09f;
+			border-bottom: 0px;
+			display: block;
+			
+		}
+	
+	nav ul li a {
+		display: block; padding:12px 15px;
+		color:rgb(122,188,255); text-decoration: none;
+        font-weight:600;
+        
+		
+
+}
+    nav > ul > li.active > a {
+        //color: rgb(122,188,255);
+        color: rgb(255, 255,255);
+        border-radius: 0px 0px 0px 0px;
+        background: rgb(122,188,255); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(122,188,255,1)), color-stop(44%,rgba(96,171,248,1)), color-stop(100%,rgba(64,150,238,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+
+    }
+ 

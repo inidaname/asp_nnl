@@ -1,0 +1,635 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="exportpermitefee.aspx.vb" Inherits="Default6" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Export Permit Fee</title>
+       <script language="javascript" type="text/javascript">
+           function printContent(el) {
+               var restorepage = document.body.innerHTML;
+               var printcontent = document.getElementById(el).innerHTML;
+               document.body.innerHTML = printcontent;
+               window.print();
+               document.body.innerHTML = restorepage;
+           }
+
+       
+    </script>
+
+    <style type ='text/css'> 
+@charset 'utf-8';
+BODY {
+	margin:0;
+	padding:0;
+	font-family: 'Century Gothic';
+	font-size: 11px;
+	color:#000;
+	background:none
+	}
+img { 
+	border:0px;
+	padding:0px;
+	margin:0px;
+}
+a { text-decoration:none; color:#666
+}
+#page{ 
+	width:927px;
+	height:686px; 
+	display:inline-block;
+	padding: 0px;
+	margin: 54px 0 0px 0;
+	text-align:left;
+	border:5px solid #000;
+	font-weight:bold;
+}
+#page2{ 
+	width:800px;
+	height:100%; 
+	display:inline-block;
+	padding: 0px;
+	margin: 54px 0 0px 0;
+	text-align:center;
+	border:5px solid #000;
+}
+#row1{
+	width:100%;
+	height:68px;
+	border-bottom:1px #000 solid;
+	margin:0;
+	padding:0;
+}
+#row2{
+	width:96%;
+	height:25px;
+	border-bottom:1px #000 solid;
+	font-weight:bold;
+	font-size:21px;
+	color:#000;
+	text-align:center;
+	margin:0;
+	padding:0px 0px 0px 40px;
+}
+#row3{
+	width:96%;
+	height:21px;
+	border-bottom:1px #000 solid;
+	text-align:center;
+	margin:-2px 0 0 0;
+	padding:0px 0px 0px 40px;
+	display:inline-block;
+	font-family:System;
+	font-size:10px
+}
+#row4{
+	width:100%;
+	height:20px;
+	border-bottom:2px #000 solid
+}
+#row5{
+	width:100%;
+	height:62px;
+	border-bottom:2px #000 solid;
+	margin:0;
+	padding:0;
+	background:#C2D697
+}
+#row6{
+	width:100%;
+	height:22px;
+	border-bottom:1px #000 solid;
+	text-align:center;
+	margin:0;
+	padding:0px 0px 0px 0px;
+	display:inline-block
+}
+#row7{
+	width:100%;
+	height:20px;
+	border-bottom:1px #000 solid
+}
+#row8{
+	width:100%;
+	height:20px;
+	border:0;
+	display:inline-block;
+}
+#row9{
+	width:100%;
+	height:19px;
+	border-bottom:1px #000 solid;
+	text-align:center;
+	margin:0;
+	padding:0px 0px 0px 0px;
+	display:inline-block;
+}
+#row10{
+	width:100%;
+	height:19px;
+	border-bottom:1px #000 solid;
+	background:none;
+	font-size:12px;
+	text-align:center;
+	background:#C4DAF1
+}
+#row11{
+	width:100%;
+	height:19px;
+	border-bottom:1px #000 solid;
+	background:none;
+	font-size:12px;
+	text-align:center;
+}
+#row12{
+	width:100%;
+	height:39px;
+	border-bottom:1px #000 solid;
+	border-top:1px #000 solid;
+	font-size:12px;
+	text-align:center;
+	background:#C4DAF1
+}
+#row13{
+	width:100%;
+	height:59px;
+	border-bottom:2px #000 solid;
+	margin:0;
+	padding:0;
+}
+#row14{
+	width:100%;
+	height:38px;
+	border-bottom:2px #000 solid;
+	margin:0;
+	padding:0;
+	font-size:13px;
+	text-align:center;
+	background:#C2D697
+}
+#row15{
+	width:99%;
+	height:88px;
+	border-bottom:2px #000 solid;
+	margin:0;
+	padding:0;
+	font-size:13px;
+	text-align:justify;
+	padding:6px 5px
+}
+#row16{
+	width:99%;
+	height:22px;
+	margin:0;
+	padding:0;
+	font-size:14px;
+	text-align:center;
+	padding:8px 5px;
+	background:url(invoice/images/foot.jpg) 0px 0px repeat-x
+}
+#row17{
+	width:100%;
+	height:74px;
+	margin:0;
+	padding:0;
+	font-size:14px;
+	text-align:center;
+	padding:0px 0px;
+}
+#row18{
+	width:100%;
+	height:97px;
+	margin:0;
+	padding:0;
+	font-size:14px;
+	text-align:center;
+	padding:2px 0px;
+	border-bottom:5px #000 solid;
+	line-height:20px
+}
+#row19{
+	width:100%;
+	height:24px;
+	margin:0;
+	padding:0;
+	font-size:22px;
+	font-weight:bold;
+	text-align:center;
+	padding:2px 0px;
+	border-bottom:5px #000 solid;
+	background:#D8E5BA
+}
+#row20{
+	width:100%;
+	height:164px;
+	margin:0;
+	padding:0;
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+	padding:0px 0px;
+	border-bottom:2px #000 solid;
+	display:inline-block;
+	background:#D8E5BA
+        }
+#row21{
+	width:98%;
+	height:33px;
+	margin:0;
+	padding:0;
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+	padding:17px 4px;
+	background:#C2D69B
+}
+#col1{
+	width:149px;
+	height:21px;
+	float:left;
+}
+#col2{
+	width:105px;
+	height:18px;
+	float:left;
+	border-bottom:2px #000 solid;
+	border-top:2px #000 solid;
+	border-left:2px #000 solid;
+	border-right:2px #000 solid;
+	font-size:13px;
+	text-align:right
+}
+#col3{
+	width:166px;
+	height:18px;
+	float:left;
+	border-bottom:2px #000 solid;
+	border-top:2px #000 solid;
+	border-right:2px #000 solid;
+	font-size:13px;
+	text-align:right
+}
+#col4{
+	width:261px;
+	height:18px;
+	float:left;
+}
+#col5{
+	width:137px;
+	height:18px;
+	float:left;
+	border-bottom:2px #000 solid;
+	border-top:2px #000 solid;
+	border-right:1px #000 solid;
+	border-left:2px #000 solid;
+	font-size:13px;
+	text-align:right
+}
+#col6{
+	width:100px;
+	height:18px;
+	float:left;
+	border-bottom:2px #000 solid;
+	border-top:2px #000 solid;
+	font-size:13px;
+	margin:0;
+	padding:0;
+	text-align:left
+}
+#col7{
+	width:687px;
+	height:18px;
+	float:left;
+}
+#col8{
+	width:294px;
+	height:18px;
+	float:left;
+	text-align:right;
+	font-size:15px
+}
+#col9{
+	width:128px;
+	height:19px;
+	float:left;
+	border-bottom:2px #000 solid;
+	border-right:2px #000 solid;
+	border-left:2px #000 solid;
+	font-size:13px;
+	text-align:right
+}
+#col10{
+	width:399px;
+	height:19px;
+	float:left;
+	border-bottom:2px #000 solid;
+	border-right:2px #000 solid;
+	font-size:13px;
+	text-align:right
+}
+#col11{
+	width:100px;
+	height:18px;
+	float:left;
+	text-align:left
+}
+#col12{
+	width:128px;
+	height:19px;
+	float:left;
+	border-top:2px #000 solid;
+	border-right:2px #000 solid;
+	border-left:2px #000 solid;
+	font-size:13px;
+	text-align:right
+}
+#col13{
+	width:399px;
+	height:19px;
+	float:left;
+	border-top:2px #000 solid;
+	border-right:2px #000 solid;
+	font-size:13px;
+	text-align:right
+}
+#col14{
+	width:294px;
+	height:20px;
+	float:left;
+	border-right:2px #000 solid;
+}
+#col15{
+	width:425px;
+	height:20px;
+	float:left;
+	border-right:1px #000 solid;
+}
+#col16{
+	width:154px;
+	height:20px;
+	float:left;
+	border-right:1px #000 solid;
+}
+#col17{
+	width:245px;
+	height:20px;
+	float:left;
+	border-right:1px #000 solid;
+}
+#col18{
+	width:100px;
+	height:20px;
+	float:left;
+}
+#col19{
+	width:150px;
+	height:29px;
+	float:left;
+	border-right:1px #000 solid;
+	margin:0;
+	padding:10px 0 0 0;
+}
+#col20{
+	width:106px;
+	height:29px;
+	float:left;
+	border-right:1px #000 solid;
+	margin:0;
+	padding:10px 0 0 0;
+}
+#col21{
+	width:430px;
+	height:29px;
+	float:left;
+	border-right:1px #000 solid;
+	margin:0;
+	padding:10px 0 0 0;
+}
+#col22{
+	width:137px;
+	height:29px;
+	float:left;
+	border-right:1px #000 solid;
+	margin:0;
+	padding:10px 0 0 0;
+}
+#col23{
+	width:100px;
+	height:29px;
+	float:left;
+	margin:0;
+	padding:10px 0 0 0;
+}
+#col24{
+	width:150px;
+	height:19px;
+	float:left;
+	border-right:1px #000 solid;
+	margin:0;
+}
+#col25{
+	width:106px;
+	height:19px;
+	float:left;
+	border-right:1px #000 solid;
+	margin:0;
+}
+#col26{
+	width:430px;
+	height:19px;
+	float:left;
+	border-right:1px #000 solid;
+	margin:0;
+}
+#col27{
+	width:137px;
+	height:19px;
+	float:left;
+	border-right:1px #000 solid;
+	margin:0;
+}
+#col28{
+	width:100px;
+	height:19px;
+	float:left;
+	margin:0;
+}
+#col29{
+	width:826px;
+	height:60px;
+	float:left;
+	margin:0;
+	text-align:right;
+	font-size:12px;
+	display:inline-block
+}
+#col30{
+	width:101px;
+	height:62px;
+	float:left;
+	margin:0;
+}
+#col31{
+	width:100px;
+	height:19px;
+	float:left;
+	margin:0;
+	border-left:1px #000 solid;
+	border-bottom:1px #000 solid;
+	background:#00CCFF
+}
+#col32{
+	width:826px;
+	height:16px;
+	float:left;
+	margin:0;
+	text-align:right;
+	font-size:12px;
+}
+#col33{
+	width:126px;
+	height:19px;
+	float:left;
+	margin:0;
+	text-align:right;
+	font-size:14px;
+	padding:5px 0 0 0;
+}
+#col34{
+	width:559px;
+	height:17px;
+	float:left;
+	margin:0;
+	text-align:center;
+	font-size:14px;
+	padding:5px 0 0 0;
+	border-top:1px #000 solid;
+	border-bottom:1px #000 solid;
+	border-left:1px #000 solid;
+	border-right:1px #000 solid;
+}
+#col35{
+	width:139px;
+	height:19px;
+	float:left;
+	margin:0;
+	text-align:right;
+	font-size:14px;
+	padding:5px 0 0 0;
+}
+#col36{
+	width:448px;
+	height:17px;
+	float:left;
+	margin:0;
+	text-align:right;
+	padding:0 0 0 0;
+}
+#col37{
+	width:193px;
+	height:19px;
+	float:left;
+	margin:0;
+	text-align:right;
+	padding:1px 4px 0 0;
+}
+#col38{
+	width:251px;
+	height:19px;
+	float:left;
+	margin:0;
+	text-align:right;
+	padding:0 0 0 0;
+	border-bottom:1px #D6D7DB solid;
+	background:#fff
+}
+
+</style>
+
+    <style type="text/css">
+
+        .Background
+
+        {
+
+            background-color: Black;
+
+            filter: alpha(opacity=90);
+
+            opacity: 0.8;
+
+        }
+
+        .Popup
+
+        {
+
+            background-color: #FFFFFF;
+
+            border-width: 3px;
+
+            border-style: solid;
+
+            border-color: black;
+
+            padding-top: 10px;
+
+            padding-left: 10px;
+
+            width: 800px;
+
+            height: 450px;
+
+        }
+
+        .lbl
+
+        {
+
+            font-size:16px;
+
+            font-style:italic;
+
+            font-weight:bold;
+
+        }
+
+    </style>
+
+ </head>
+<body>
+    <form id="form1" runat="server"  >
+     
+    <div id="printbox" runat="server" style="text-align:center">
+    <div id="page2" >
+   <div id='row17'><img src="invoice/images/logo2.jpg"/></div>
+    <div id='row14'>FEDERAL MINISTRY OF INDUSTRY, TRADE AND INVESMENT
+        COMMODITIES AND PRODUCTS INSPECTORATE DEPARTMENT</div>
+        <%--<div id='row18'><hr /></div>--%>
+            <%
+        Dim GenTool As NNLN = xsmsCentralToolx.SetTool
+              
+        Dim msgAlert As String = GenTool.getSingleValue("Select CompanyExportAlert from companyregistration where sysID=" & Session("ID"))
+            If String.IsNullOrEmpty(msgAlert) = True Then
+                Response.Write("<script>window.close();</" + "script>")
+                Response.End()
+            Else
+                Response.Write(msgAlert)
+            End If
+       
+        %>
+      <div ><hr /></div>
+     
+    </div>
+
+    </div>
+    <br />
+    <div style ="text-align :center">
+     <asp:Button ID="btnprint" runat="server" Text="PRINT" OnClientClick="printContent('printbox')" />
+      <asp:Button ID="btnClose" runat="server" Text="PROCEED TO EXPORT PERMIT APPLICATION" PostBackUrl="~/exportpermit.aspx" /></div>
+      <br />
+       <br />
+    </form>
+</body>
+</html>

@@ -1,0 +1,147 @@
+CREATE TRIGGER trgAfterInsert ON [dbo].[Employee_Test] 
+FOR INSERT
+AS
+	declare @empid int;
+	declare @empname varchar(100);
+	declare @empsal decimal(10,2);
+	declare @audit_action varchar(100);
+
+	select @empid=i.Emp_ID from inserted i;	
+	select @empname=i.Emp_Name from inserted i;	
+	select @empsal=i.Emp_Sal from inserted i;	
+	set @audit_action='Inserted Record -- After Insert Trigger.';
+
+	insert into Employee_Test_Audit
+           (Emp_ID,Emp_Name,Emp_Sal,Audit_Action,Audit_Timestamp) 
+	values(@empid,@empname,@empsal,@audit_action,getdate());
+
+	PRINT 'AFTER INSERT trigger fired.'
+GO
+
+
+
+CREATE TRIGGER trgAfterUpdate ON [dbo].[Employee_Test] 
+FOR UPDATE
+AS
+	declare @empid int;
+	declare @empname varchar(100);
+	declare @empsal decimal(10,2);
+	declare @audit_action varchar(100);
+
+	select @empid=i.Emp_ID from inserted i;	
+	select @empname=i.Emp_Name from inserted i;	
+	select @empsal=i.Emp_Sal from inserted i;	
+	
+	if update(Emp_Name)
+		set @audit_action='Updated Record -- After Update Trigger.';
+	if update(Emp_Sal)
+		set @audit_action='Updated Record -- After Update Trigger.';
+
+	insert into Employee_Test_Audit(Emp_ID,Emp_Name,Emp_Sal,Audit_Action,Audit_Timestamp) 
+	values(@empid,@empname,@empsal,@audit_action,getdate());
+
+	PRINT 'AFTER UPDATE Trigger fired.'
+GO
+
+
+
+CREATE TRIGGER trgAfterDelete ON [dbo].[Employee_Test] 
+AFTER DELETE
+AS
+	declare @empid int;
+	declare @empname varchar(100);
+	declare @empsal decimal(10,2);
+	declare @audit_action varchar(100);
+
+	select @empid=d.Emp_ID from deleted d;	
+	select @empname=d.Emp_Name from deleted d;	
+	select @empsal=d.Emp_Sal from deleted d;	
+	set @audit_action='Deleted -- After Delete Trigger.';
+
+	insert into Employee_Test_Audit
+(Emp_ID,Emp_Name,Emp_Sal,Audit_Action,Audit_Timestamp) 
+	values(@empid,@empname,@empsal,@audit_action,getdate());
+
+	PRINT 'AFTER DELETE TRIGGER fired.'
+GO
+
+
+ALTER TABLE Employee_Test DISABLE TRIGGER trgAfterDelete
+
+
+
+CREATE TRIGGER trgInsteadOfDelete ON [dbo].[Employee_Test] 
+INSTEAD OF DELETE
+AS
+	declare @emp_id int;
+	declare @emp_name varchar(100);
+	declare @emp_sal int;
+	
+	select @emp_id=d.Emp_ID from deleted d;
+	select @emp_name=d.Emp_Name from deleted d;
+	select @emp_sal=d.Emp_Sal from deleted d;
+
+	BEGIN
+		if(@emp_sal>1200)
+		begin
+			RAISERROR('Cannot delete where salary > 1200',16,1);
+			ROLLBACK;
+		end
+		else
+		begin
+			delete from Employee_Test where Emp_ID=@emp_id;
+			COMMIT;
+			insert into Employee_Test_Audit(Emp_ID,Emp_Name,Emp_Sal,Audit_Action,Audit_Timestamp)
+			values(@emp_id,@emp_name,@emp_sal,'Deleted -- Instead Of Delete Trigger.',getdate());
+			PRINT 'Record Deleted -- Instead Of Delete Trigger.'
+		end
+	END
+GO
+
+
+SET @TRIGGER_CHECKS=TRUE;
+SET @TRIGGER_BEFORE_INSERT_CHECKS = TRUE;
+SET @TRIGGER_AFTER_INSERT_CHECKS = TRUE;
+SET @TRIGGER_BEFORE_UPDATE_CHECKS = TRUE;
+SET @TRIGGER_AFTER_UPDATE_CHECKS = TRUE;
+SET @TRIGGER_BEFORE_DELETE_CHECKS = TRUE;
+SET @TRIGGER_AFTER_DELETE_CHECKS = TRUE;
+
+IF ((@TRIGGER_CHECKS = TRUE) OR (@TRIGGER_BEFORE_INSERT_CHECKS = TRUE)) THEN
+END IF;
+
+Protected Sub uploadBtn_Click(sender As Object, e As System.EventArgs) Handles uploadBtn.Click
+    Dim ImageFiles As HttpFileCollection = Request.Files
+    For i As Integer = 0 To ImageFiles.Count - 1
+    Dim file As HttpPostedFile = ImageFiles(i)
+        file.SaveAs(Server.MapPath("Uploads/") & file.FileName) 
+    Next       
+End Sub
+
+
+
+1. The ERP System is not browser independent; the working and the cascading is different in different browsers. It working is poor in internet explorer, fair in Mozilla, good in good chrome.
+
+2. When the browser is minimized, the display cascading is not ok. All the contents get overlapped on one another. I think it'd be ok if the side menu can be in form of image or freezing mode that it can't be altered however d browser size.
+
+3.  The droplist is most time not auto-populating the subsequent droplist... e.g. Selecting States to get local govt.
+
+4.  Select image and automatically display would be better.
+
+5.  The image should returns or show "No image when there's no image selected or uploaded by the applicants
+
+6.  The "print out" is not well formated; and should bear the school logo.
+
+7.  Login in with student Matric number is not understood and not working.
+
+8.  Login pages for both student and staff do not have the school logo
+
+9.  The Record Reports should be large 4 better viewing...
+
+10.  The level of previleges are not functioning
+
+11.  The some menu shouldn't be visible to some staff or to some students.
+
+12.  The Admission Application Final page; the link "Click" is not working.
+
+13. O'level Exam type should have "Other" exam type that the applicants can input other than the common ones like WAEC, NECO e.t.c

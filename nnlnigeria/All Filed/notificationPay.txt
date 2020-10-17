@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PaymentNotificationRequest>
+  <Payments>
+    <Payment>
+      <ProductGroupCode>HTTPSERVICE</ProductGroupCode>
+      <PaymentLogId>3193831</PaymentLogId>
+      <CustReference>cyprosoft</CustReference>
+      <AlternateCustReference>5678</AlternateCustReference>
+      <Amount>27150.00</Amount>
+      <PaymentStatus>0</PaymentStatus>
+      <PaymentMethod>Cash</PaymentMethod>
+      <PaymentReference>FBP|BRH|ABC|28-02-2013|312247</PaymentReference>
+      <TerminalId/>
+      <ChannelName>Bank Branc</ChannelName>
+      <Location> Nekede Branch</Location>
+      <IsReversal>False</IsReversal>
+      <PaymentDate>02/28/2013 12:03:01</PaymentDate>
+      <SettlementDate>03/01/2013 00:00:01</SettlementDate>
+      <InstitutionId>FDNKD</InstitutionId>
+      <InstitutionName>Federal Poly Nekede</InstitutionName>
+      <BranchName> Nekede Branch</BranchName>
+      <BankName>Fidelity Bank Plc</BankName>
+      <FeeName/>
+      <CustomerName>OCHULOR STANLEY</CustomerName>
+      <OtherCustomerInfo>|07031967265</OtherCustomerInfo>
+      <ReceiptNo>1305905886</ReceiptNo>
+      <CollectionsAccount>NGN09023104005</CollectionsAccount>
+      <ThirdPartyCode>ETECH03</ThirdPartyCode>
+      <PaymentItems>
+        <PaymentItem>
+          <ItemName>OND Even.2nd Year(2012/2013) (Sch of Engineering)</ItemName>
+          <ItemCode>ONDEVE02ENG</ItemCode>
+          <ItemAmount>27150.00</ItemAmount>
+          <LeadBankCode>FBP</LeadBankCode>
+          <LeadBankCbnCode>070</LeadBankCbnCode>
+          <LeadBankName>Fidelity Bank Plc</LeadBankName>
+        </PaymentItem>
+      </PaymentItems>
+      <BankCode>FBP</BankCode>
+      <CustomerAddress/>
+      <CustomerPhoneNumber>07031967265</CustomerPhoneNumber>
+      <DepositorName>07031967265</DepositorName>
+      <DepositSlipNumber>0625046</DepositSlipNumber>
+      <PaymentCurrency>566</PaymentCurrency>
+    </Payment>
+  </Payments>
+</PaymentNotificationRequest>

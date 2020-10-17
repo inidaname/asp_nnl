@@ -1,0 +1,26 @@
+﻿
+Partial Class logindirection
+    Inherits System.Web.UI.Page
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        If String.IsNullOrEmpty(Session("ID")) = True Then
+            Try
+                Response.Redirect("Default.aspx?error=You have not login,please enter your credentials on the space provided and click login button. Register your account details if you are new")
+            Catch ex As Exception
+            End Try
+        End If
+
+        Try
+            Dim GenTool As NNLN = xsmsCentralToolx.SetTool
+
+            Dim msgAlert As String = GenTool.getSingleValue("Select CompanyExportAlert from companyregistration where CompexportShow=1 AND sysID=" & Session("ID"))
+            If String.IsNullOrEmpty(msgAlert) = True Then
+                Response.Redirect("exportpermit.aspx")
+            Else
+                Response.Redirect("exportpermitefee.aspx")
+            End If
+
+        Catch ex As Exception
+        End Try
+
+    End Sub
+End Class
